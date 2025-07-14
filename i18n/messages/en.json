@@ -5,16 +5,17 @@
     "countdown": "Closing in {countdown} seconds"
   },
   "Header": {
+    "budget": "Budget",
     "blogs": "Blogs",
     "about": "About",
     "sourceCode": "Source Code",
     "proVersion": "Pro Version"
   },
   "Footer": {
-    "Copyright": "Copyright © {year} Next Forge. All rights reserved.",
+    "Copyright": "Copyright © {year} Monthly Budget. All rights reserved.",
     "Newsletter": {
       "title": "Subscribe to our newsletter",
-      "description": "Get the latest news and updates from Next Forge",
+      "description": "Get the latest budget tips and feature updates",
       "defaultErrorMessage": "Please enter a valid email address",
       "successMessage": "Subscription successful",
       "errorMessage": "Subscription failed",
@@ -25,9 +26,9 @@
     }
   },
   "Home": {
-    "title": "Next Forge",
-    "tagLine": "Multilingual Next.js 15 Starter",
-    "description": "A multilingual Next.js 15 starter with built-in i18n support. Launch your global-ready web application with a clean, efficient, and SEO-friendly foundation.",
+    "title": "Monthly Budget",
+    "tagLine": "Smart Personal Finance Tracker",
+    "description": "Create a budget for the month with our Excel-like form entry - intuitive and fast. More data views and budgeting features coming soon, including recurring budget tracking for bills and income on specific dates.",
     "whoIsUsing": "Who is Using This Starter"
   },
   "Blogs": {

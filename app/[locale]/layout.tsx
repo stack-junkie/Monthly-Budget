@@ -1,7 +1,4 @@
-import BaiDuAnalytics from "@/app/BaiDuAnalytics";
-import GoogleAdsense from "@/app/GoogleAdsense";
-import GoogleAnalytics from "@/app/GoogleAnalytics";
-import PlausibleAnalytics from "@/app/PlausibleAnalytics";
+
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import { LanguageDetectionAlert } from "@/components/LanguageDetectionAlert";
@@ -12,7 +9,6 @@ import { constructMetadata } from "@/lib/metadata";
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import "@/styles/loading.css";
-import { Analytics } from "@vercel/analytics/react";
 import { Metadata, Viewport } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
@@ -48,7 +44,7 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
 
@@ -86,17 +82,6 @@ export default async function LocaleLayout({
           </ThemeProvider>
         </NextIntlClientProvider>
         <TailwindIndicator />
-        {process.env.NODE_ENV === "development" ? (
-          <></>
-        ) : (
-          <>
-            <Analytics />
-            <BaiDuAnalytics />
-            <GoogleAnalytics />
-            <GoogleAdsense />
-            <PlausibleAnalytics />
-          </>
-        )}
       </body>
     </html>
   );

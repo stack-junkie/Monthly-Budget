@@ -1,27 +1,17 @@
-🌍 *[English](README.md) ∙ [简体中文](README_zh.md) ∙ [日本語](README_ja.md)*
+# Monthly Budget
 
-# Next Forge - Multilingual Next.js 15 Starter
-
-A feature-rich Next.js 15 multilingual starter template to help you quickly build globally-ready websites.
-
-- [👉 Source Code](https://github.com/weijunext/nextjs-15-starter)
-- [👉 Live Demo](https://nextforge.dev/)
-
-🚀 Looking for a full-featured SaaS Starter Kit? [Check out the complete version](https://nexty.dev)
+A modern, responsive budget tracking application built with Next.js 15 and React. Track your income and expenses with smart categories, real-time calculations, and export capabilities.
 
 ## ✨ Features
 
-- 🌐 Built-in i18n support (English, Chinese, Japanese)
-- 🎨 Modern UI design with Tailwind CSS
-- 🌙 Dark/Light theme toggle
-- 📱 Responsive layout
-- 📝 MDX blog system 
-- 🔍 SEO optimization
-- 📊 Integrated analytics tools
-  - Google Analytics
-  - Baidu Analytics
-  - Google Adsense
-  - Vercel Analytics
+- 💰 **Income & Expense Tracking** - Categorize and track all your financial transactions
+- 📊 **Real-time Dashboard** - Live calculations of totals, balance, and summaries
+- 📋 **Smart Categories** - Predefined categories with ability to create custom ones
+- 📤 **Export Functionality** - Export your budget data to CSV or Excel formats
+- 🎨 **Modern UI** - Clean, responsive design with Tailwind CSS
+- 🌙 **Dark/Light Theme** - Toggle between light and dark modes
+- 📱 **Mobile Responsive** - Works seamlessly on all device sizes
+- ⚡ **Fast Performance** - Built with Next.js 15 and React 19
 
 ## 🚀 Quick Start
 
@@ -30,22 +20,17 @@ A feature-rich Next.js 15 multilingual starter template to help you quickly buil
 - Node.js 18.17 or higher
 - pnpm 9.0 or higher (recommended)
 
-> **Note**: The project has configured `packageManager` field, we recommend using pnpm for the best experience.
-
 ### Installation
 
 1. Clone the repository:
+
 ```bash
-git clone https://github.com/weijunext/nextjs-15-starter.git
-cd nextjs-15-starter
+git clone https://github.com/stack-junkie/Monthly-Budget.git
+cd Monthly-Budget
 ```
 
-2. Enable Corepack (recommended):
-```bash
-corepack enable
-```
+2. Install dependencies:
 
-3. Install dependencies:
 ```bash
 pnpm install
 # or use other package managers
@@ -53,230 +38,55 @@ npm install
 yarn
 ```
 
-4. Copy environment variables:
-```bash
-cp .env.example .env
-```
+3. Start the development server:
 
-5. Start the development server:
 ```bash
 pnpm dev
 # or npm run dev
 ```
 
-Visit http://localhost:3000 to view your application.
+4. Open your browser and visit [http://localhost:3000](http://localhost:3000) to start using the budget app.
 
-## ⚙️ Configuration
+## 🎯 Usage
 
-1. Basic Setup
-   - Edit `config/site.ts` for website information
-   - Update icons and logo in `public/`
-   - Configure `app/sitemap.ts` for sitemap
-   - Update `app/robots.ts` for robots.txt
+### Getting Started
 
-2. i18n Setup
-   - Add/modify language files in `i18n/messages/`
-   - Configure supported languages in `i18n/routing.ts`
-   - Set up i18n routing in `middleware.ts`
-   - Create pages under `app/[locale]/`
-   - Use the `Link` component from `i18n/routing.ts` instead of Next.js default
+1. **Navigate to the Budget Page**: Visit `/budget` to access the main budget interface
+2. **Add Income/Expenses**: Use the spreadsheet interface to add your financial data
+3. **View Summary**: The dashboard shows real-time calculations of your totals and balance
+4. **Export Data**: Download your budget as CSV or Excel files
 
-## 📝 Content Management
+### Features Overview
 
-### Blog Posts
-Create MDX files in `blogs/[locale]` with the following format:
+- **Spreadsheet Interface**: Excel-like table for easy data entry
+- **Smart Categories**: Predefined categories for common income/expense types
+- **Custom Categories**: Create your own categories and items
+- **Real-time Calculations**: Automatic totals and balance calculations
+- **Data Export**: Export to CSV or Excel formats
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
 
-```markdown
----
-title: Post Title
-description: Post Description
-image: /image.png
-slug: /url-path
-tags: tag1,tag2
-date: 2025-02-20
-visible: published
-pin: true
----
+## 🛠️ Technology Stack
 
-Post content...
-```
-
-Reference `types/blog.ts` for supported fields.
-
-### Static Pages
-Manage static page content in `content/[page]/[locale].mdx`.
-
-## 🔍 SEO Optimization
-
-Built-in comprehensive SEO features:
-   - Server-side rendering and static generation
-   - Automatic sitemap.xml generation
-   - robots.txt configuration
-   - Optimized metadata
-   - Open Graph support
-   - Multilingual SEO support
-
-## 📊 Analytics
-
-Enable analytics by adding IDs in `.env`:
-```
-NEXT_PUBLIC_GOOGLE_ANALYTICS=
-NEXT_PUBLIC_BAIDU_TONGJI=
-NEXT_PUBLIC_GOOGLE_ADSENSE=
-```
+- **Framework**: Next.js 15 with React 19
+- **Styling**: Tailwind CSS with custom components
+- **Spreadsheet**: jspreadsheet-ce for Excel-like functionality
+- **Data Export**: xlsx library for Excel export
+- **UI Components**: Radix UI primitives
+- **State Management**: React hooks and Zustand
+- **TypeScript**: Full type safety
 
 ## 📁 Project Structure
 
 ```
-nextjs-15-starter/
-├── app/                      # App directory
-│   ├── [locale]/            # Internationalized routes
-│   │   ├── about/           # About page
-│   │   ├── blogs/           # Blog pages
-│   │   └── ...              # Other pages
-│   ├── api/                 # API routes
-│   └── globals/             # Global components
-├── blogs/                   # Blog content (MDX)
-│   ├── en/                  # English blogs
-│   ├── ja/                  # Japanese blogs
-│   └── zh/                  # Chinese blogs
-├── components/              # Reusable components
-│   ├── ui/                  # Base UI components
-│   ├── header/              # Header components
-│   ├── footer/              # Footer components
-│   └── ...                  # Other components
-├── config/                  # Configuration files
-├── content/                 # Static content (MDX)
-├── i18n/                    # Internationalization
-│   ├── messages/            # Translation files
-│   ├── routing.ts           # Routing configuration
-│   └── request.ts           # Request configuration
-├── lib/                     # Utility functions
-├── public/                  # Static assets
-└── types/                   # Type definitions
+app/
+├── [locale]/
+│   └── budget/          # Main budget page
+components/
+├── budget/              # Budget-specific components
+│   ├── SimpleBudgetTable.tsx
+│   ├── SummaryDashboard.tsx
+│   ├── ViewToggle.tsx
+│   └── ...
+types/
+└── budget.ts           # TypeScript definitions
 ```
-
-## 🛠️ Tech Stack
-
-- **Framework**: Next.js 15 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS + Shadcn/ui
-- **Internationalization**: next-intl
-- **Content**: MDX
-- **State Management**: Zustand
-- **Deployment**: Vercel
-- **Package Manager**: pnpm (recommended)
-
-## 🚀 Deployment
-
-### One-Click Deploy
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/weijunext/nextjs-15-starter&project-name=&repository-name=nextjs-15-starter&demo-title=Nextjs15Starter&demo-description=Nextjs%2015%20starter.&demo-url=https://nextforge.dev&demo-image=https://nextforge.dev/og.png)
-
-### Manual Deployment to Vercel
-
-1. Push your code to GitHub
-2. Import project in Vercel
-3. Configure environment variables
-4. Deploy
-
-### Other Platforms
-
-```bash
-# Build for production
-pnpm build
-
-# Start production server
-pnpm start
-```
-
-## 💡 Development Best Practices
-
-### Package Manager
-
-- Project configured with `packageManager: "pnpm@10.12.4"`
-- Enable Corepack: `corepack enable`
-- Team members should use the same pnpm version
-
-### Code Quality
-
-```bash
-# Lint code
-pnpm lint
-
-# Type checking
-pnpm type-check
-```
-
-### Internationalization Development
-
-1. Adding new language support:
-   - Add new language files in `i18n/messages/`
-   - Update `i18n/routing.ts` configuration
-   - Create corresponding language directories in `blogs/` and `content/`
-
-2. Using translations:
-```tsx
-import { useTranslations } from 'next-intl';
-
-export default function MyComponent() {
-  const t = useTranslations('namespace');
-  return <h1>{t('title')}</h1>;
-}
-```
-
-## 🔧 Troubleshooting
-
-### Common Issues
-
-**1. Package manager version mismatch**
-```bash
-# Remove node_modules and lockfile
-rm -rf node_modules pnpm-lock.yaml
-# Reinstall
-pnpm install
-```
-
-**2. MDX files not displaying**
-- Check file path is correct
-- Verify frontmatter format
-- Ensure `visible` field is set to `published`
-
-**3. Internationalization routing issues**
-- Use `Link` component from `i18n/routing.ts`
-- Check `middleware.ts` configuration
-
-**4. Styles not working**
-- Verify Tailwind CSS class names are correct
-- Try restarting development server
-
-### Environment Variables
-
-Ensure `.env` file contains necessary configuration:
-```bash
-# Copy example config
-cp .env.example .env
-# Modify as needed
-```
-
-## 📄 License
-
-MIT
-
-## 🤝 Contributing
-
-Issues and Pull Requests are welcome!
-
-## About the Author
-
-Next.js full-stack specialist providing expert services in project development, performance optimization, and SEO improvement.
-
-For consulting and training opportunities, reach out at weijunext@gmail.com
-
-- [Github](https://github.com/weijunext)
-- [Bento](https://bento.me/weijunext)
-- [Twitter/X](https://twitter.com/judewei_dev)
-
-<a href="https://www.buymeacoffee.com/weijunext" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G6TWWMG)

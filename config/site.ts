@@ -1,32 +1,25 @@
 import { SiteConfig } from "@/types/siteConfig";
 
-export const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://nextforge.dev";
+export const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
-export const SOURCE_CODE_URL = "https://github.com/weijunext/nextjs-15-starter";
-export const PRO_VERSION = "https://nexty.dev";
+export const SOURCE_CODE_URL = "https://github.com/stack-junkie/budget-spreadsheet-app";
 
-const TWITTER_URL = 'https://x.com/weijunext'
-const BSKY_URL = 'https://bsky.app/profile/judewei.bsky.social'
-const EMAIL_URL = 'mailto:weijunext@gmail.com'
-const GITHUB_URL = 'https://github.com/weijunext'
+const GITHUB_URL = 'https://github.com/stack-junkie'
 
 export const siteConfig: SiteConfig = {
-  name: "Next Forge",
-  tagLine: 'Multilingual Next.js 15 Starter',
+  name: "Monthly Budget",
+  tagLine: 'Smart Personal Finance Tracker',
   description:
-    "A multilingual Next.js 15 starter with built-in i18n support. Launch your global-ready web application with a clean, efficient, and SEO-friendly foundation.",
+    "Take control of your finances with our intuitive monthly budget tracker. Create custom categories, track expenses, and export your data with enterprise-level security.",
   url: BASE_URL,
   authors: [
     {
-      name: "weijunext",
-      url: "https://weijunext.com",
+      name: "stack-junkie",
+      url: "https://github.com/stack-junkie",
     }
   ],
-  creator: '@weijunext',
+  creator: '@stack-junkie',
   socialLinks: {
-    bluesky: BSKY_URL,
-    twitter: TWITTER_URL,
-    email: EMAIL_URL,
     github: GITHUB_URL,
   },
   themeColors: [

@@ -18,17 +18,13 @@ const Header = () => {
             <I18nLink
               href="/"
               prefetch={false}
-              className="flex items-center space-x-1 font-bold"
+              className="flex flex-col font-bold"
             >
-              <Image
-                alt={siteConfig.name}
-                src="/logo.svg"
-                className="w-6 h-6"
-                width={32}
-                height={32}
-              />
-              <span className="text-gray-800 dark:text-gray-200">
+              <span className="text-gray-800 dark:text-gray-200 text-4xl font-bold">
                 {t("title")}
+              </span>
+              <span className="text-gray-500 dark:text-gray-400 text-sm">
+                by Stack-Junkie.com
               </span>
             </I18nLink>
             <div className="hidden md:flex md:gap-x-6"></div>

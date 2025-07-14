@@ -34,32 +34,11 @@ export default function MobileMenu() {
               prefetch={false}
               className="flex items-center space-x-1 font-bold"
             >
-              <Image
-                alt={siteConfig.name}
-                src="/logo.svg"
-                className="w-6 h-6"
-                width={32}
-                height={32}
-              />
-              <span className="text-gray-800 dark:text-gray-200">
+              <span className="text-gray-800 dark:text-gray-200 text-xl">
                 {t("title")}
               </span>
             </I18nLink>
           </DropdownMenuLabel>
-          <DropdownMenuSeparator />
-          <DropdownMenuGroup>
-            {headerLinks.map((link) => (
-              <DropdownMenuItem key={link.name}>
-                <I18nLink
-                  href={link.href}
-                  title={tHeader(link.name)}
-                  prefetch={false}
-                >
-                  {tHeader(link.name)}
-                </I18nLink>
-              </DropdownMenuItem>
-            ))}
-          </DropdownMenuGroup>
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
             <DropdownMenuItem className="p-2 focus:bg-transparent justify-end">
