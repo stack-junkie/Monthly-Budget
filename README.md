@@ -1,4 +1,4 @@
-# Monthly Budget
+# Monthly Budget - WIP, this is a skeleton app
 
 A modern, responsive budget tracking application built with Next.js 15 and React. Track your income and expenses with smart categories, real-time calculations, and export capabilities.
 
